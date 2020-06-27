@@ -25,20 +25,10 @@ async function run() {
     }
     const text = body.split(/\r\n|\r|\n/);
     text.forEach((element) => {
-      console.log(`code --install-extension ${element}`);
-      // bar.tick();
+      shell.exec(`code --install-extension ${element}`, { silent: true });
+      bar.tick();
     });
   });
 }
 
 run();
-// const readStrem = fs.createReadStream('extensions.txt')
-
-// const interface = readline.createInterface({
-//     input: readStrem
-// })
-
-// interface.on('line', (lineString) => {
-//    shell.exec(`code --install-extension ${lineString}`, {silent: true})
-//    bar.tick();
-// })
