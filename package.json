@@ -1,0 +1,16 @@
+{
+  "name": "code-extension-installer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "index.js"
+  },
+  "bin": {
+    "code-extensions": "index.js"
+  },
+  "dependencies": {
+    "progress": "^2.0.3",
+    "shelljs": "^0.8.4"
+  }
+}
