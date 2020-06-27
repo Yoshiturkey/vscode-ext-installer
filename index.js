@@ -4,6 +4,7 @@ const fs = require("fs");
 const readline = require("readline");
 const shell = require('shelljs');
 const ProgressBar = require('progress');
+const extFile = 'https://raw.githubusercontent.com/Yoshiturkey/vscode-ext-installer/master/extensions.txt'
 
 let bar = new ProgressBar('vscode extensions installed [:bar]', { total: 23 });
 const {
@@ -18,7 +19,7 @@ if (!isCode) {
     exit(1)
 }
 
-const readStrem = fs.createReadStream('./extensions.txt')
+const readStrem = fs.createReadStream(extFile)
 
 const interface = readline.createInterface({
     input: readStrem
