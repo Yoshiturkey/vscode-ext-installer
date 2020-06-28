@@ -7,7 +7,7 @@ const ProgressBar = require("progress");
 const request = require("request");
 const extListFile =
   "https://raw.githubusercontent.com/Yoshiturkey/vscode-ext-installer/master/extensions.txt";
-let bar = new ProgressBar("vscode extensions installed [:bar]", { total: 23 });
+let bar = new ProgressBar("vscode extensions installed [:bar]", { total: 31 });
 const { exit } = require("process");
 
 const isCode = shell.which("code") || false;
